@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>git学习记录</title>
+      <link href="/2023/03/13/git%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
+      <url>/2023/03/13/git%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+      
+        <content type="html"><![CDATA[<p>之前写过很多git的文章，比较乱，下面是一些常用的内容</p><span id="more"></span><h1 id="git使用"><a href="#git使用" class="headerlink" title="git使用"></a>git使用</h1><h2 id="下拉分支"><a href="#下拉分支" class="headerlink" title="下拉分支"></a>下拉分支</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone -b anti_gyro https://**</span><br></pre></td></tr></table></figure><p>-b代表分支（branch） anti_gyro是希望下拉的分支 后面的部分是对应的网址</p><img src="/2023/03/13/git%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/1678717198492-9f8957a0-3c4d-4b86-a8d1-37ca9180a52b.png" class="" title="img"><img src="/2023/03/13/git%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/1678717396649-22138e26-e6af-4d6f-acf5-d8f291f874fb.png" class="" title="img"><p>出现错误，就是没有加分支</p><img src="/2023/03/13/git%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/1678717473332-174b138e-d4be-4478-8426-cb8f0128ac0f.png" class="" title="img"><p>加上就OK</p><img src="/2023/03/13/git%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/1678718202539-b245d645-acca-4ea7-9e1f-af9214ef54d6.png" class="" title="img"><h2 id="工程密钥"><a href="#工程密钥" class="headerlink" title="工程密钥"></a>工程密钥</h2><p><a href="https://gitee.com/help/articles/4181#article-header0">https://gitee.com/help/articles/4181#article-header0</a></p><h2 id="查看自己的账号信息即设置方式"><a href="#查看自己的账号信息即设置方式" class="headerlink" title="查看自己的账号信息即设置方式"></a>查看自己的账号信息即设置方式</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure><img src="/2023/03/13/git%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/1678717647050-2610b837-5d5e-489f-9c33-54a66c729d77.png" class="" title="img"><p>如果没有账号邮箱，可以按照下面的命令设置，注意用自己的</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;JSHERO&quot;</span><br><span class="line">git config --global user.email &quot;11717182+jsherodj@user.noreply.gitee.com&quot;</span><br></pre></td></tr></table></figure><h2 id="工程上传下拉"><a href="#工程上传下拉" class="headerlink" title="工程上传下拉"></a>工程上传下拉</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git add .//将工程添加到缓存</span><br><span class="line">git commit -m &quot;说明的文字&quot;//说明文字是对更新的说明</span><br><span class="line">git push//上传</span><br><span class="line">git pull//下拉</span><br></pre></td></tr></table></figure><img src="/2023/03/13/git%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/1678718708490-32d9dd0d-b44e-476a-9476-99ee8f40ce34.png" class="" title="img"><p>成功传上了，但好像有个warning，瞅瞅</p><h2 id="vscode使用git"><a href="#vscode使用git" class="headerlink" title="vscode使用git"></a>vscode使用git</h2>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
