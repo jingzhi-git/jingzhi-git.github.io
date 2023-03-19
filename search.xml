@@ -4,6 +4,45 @@
   
     
     <entry>
+      <title>vscode学习</title>
+      <link href="/2023/03/19/vscode%E5%AD%A6%E4%B9%A0/"/>
+      <url>/2023/03/19/vscode%E5%AD%A6%E4%B9%A0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="创建工程"><a href="#创建工程" class="headerlink" title="创建工程"></a>创建工程</h1><p>参考文献：</p><p><a href="https://www.cnblogs.com/englyf/p/16685082.html">https://www.cnblogs.com/englyf/p/16685082.html</a></p><p>这里我的vscode是英文，windows系统中我没改</p><p>这里很有意思，vscode是自己创建个文件夹然后打开这个文件夹</p><img src="/2023/03/19/vscode%E5%AD%A6%E4%B9%A0/1679196530859-25605dbc-b9d4-41c9-b1f7-49a0600aec62.png" class="" title="img"><p>自己创建个cpp文件就行了，左边栏里面有文件+号的标志</p><img src="/2023/03/19/vscode%E5%AD%A6%E4%B9%A0/1679196759569-22cefc6a-442b-40c4-b51a-e5986f5e7ab5.png" class="" title="img">]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>语雀学习</title>
+      <link href="/2023/03/19/%E8%AF%AD%E9%9B%80%E4%BD%BF%E7%94%A8/"/>
+      <url>/2023/03/19/%E8%AF%AD%E9%9B%80%E4%BD%BF%E7%94%A8/</url>
+      
+        <content type="html"><![CDATA[<p>平时一直用语雀进行文章编写，感觉很好，这里记录一下语雀中发现的好的内容</p><h1 id="文档编辑"><a href="#文档编辑" class="headerlink" title="文档编辑"></a>文档编辑</h1><p><a href="https://www.yuque.com/yuque/gpvawt">https://www.yuque.com/yuque/gpvawt</a></p><h2 id="公式的插入"><a href="#公式的插入" class="headerlink" title="公式的插入"></a>公式的插入</h2><p><a href="https://www.yuque.com/yuque/gpvawt/brzicb">https://www.yuque.com/yuque/gpvawt/brzicb</a></p><p>log：这里的话顺便说一下语雀中只要是按住ctrl打出&#x2F;，注意这里不分中英文情况下，就可以引出你要添加的内容，里面会出现公式，当然懒得找直接&#x2F;gs，gs很简单就是公式的首拼音</p><img src="/2023/03/19/%E8%AF%AD%E9%9B%80%E4%BD%BF%E7%94%A8/1679195011915-20a3ba96-ac76-44dd-8c84-d46c2f163d3d-16791989143141.png" class="" title="img"><p>log的话是_取下标，这样<img src="/2023/03/19/%E8%AF%AD%E9%9B%80%E4%BD%BF%E7%94%A8/e09b2e24d9235f875017e7e58780be8f-16791989143153.svg" class="" title="img">就OK了</p><img src="/2023/03/19/%E8%AF%AD%E9%9B%80%E4%BD%BF%E7%94%A8/1679195067788-5667455c-f951-4b8e-acb1-5fd61c4cd972-16791989143155.png" class="" title="img"><p>但这里有个问题。。。。log以23为底咋办，纯寄，不会，等再说吧，暂时没有需要</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>算法学习</title>
+      <link href="/2023/03/19/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/"/>
+      <url>/2023/03/19/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/</url>
+      
+        <content type="html"><![CDATA[<p>参考文献：</p><p><a href="https://zhuanlan.zhihu.com/p/45986027">https://zhuanlan.zhihu.com/p/45986027</a></p><h1 id="分治算法"><a href="#分治算法" class="headerlink" title="分治算法"></a>分治算法</h1><h2 id="分治算法的概念"><a href="#分治算法的概念" class="headerlink" title="分治算法的概念"></a>分治算法的概念</h2><p>分治分治，即分而治之。分治，就是把一个<strong>复杂的问题分成两个或更多的相同或相似的子问题</strong>，再把子问题分成更小的子问题……直到<strong>最后子问题可以简单的直接求解</strong>，原问题的解即子问题的解的合并。这个技巧是很多高效算法的基础，如<strong>排序算法(快速排序，归并排序)，傅立叶变换(快速傅立叶变换)<strong>……<br>直接说就是将一个难以直接解决的大问题，</strong>分割成一些规模比较小的相同的小问题</strong>，以便各个击破，分而治之。</p><p>分治算法（Divide and Conquer，D&amp;C）是一种常用的算法思想，它通过将<strong>问题划分成若干个规模较小的子问题</strong>，<strong>递归求解子问题</strong>，然后将<strong>子问题的解合并得到原问题的解</strong>。它通常用于求解一些复杂的问题，例如归并排序、快速排序、求解最大子序列等问题。</p><p>分治算法的核心思想是将原问题划分成若干个规模相同的子问题，通过递归求解子问题，然后将子问题的解合并成原问题的解。具体来说，分治算法通常包括以下几个步骤：</p><ol><li>分解：将原问题分解成若干个规模相同的子问题。</li><li>解决：递归地求解每个子问题，如果子问题足够小，则直接求解。</li><li>合并：将子问题的解合并成原问题的解。</li><li>返回：返回原问题的解。</li></ol><p>分治算法通常具有较高的时间复杂度，但由于它能够将问题划分成规模较小的子问题并递归求解，因此能够有效地解决很多复杂的问题。</p><p>分治算法可以应用于多种场景，例如图像处理、计算机视觉、自然语言处理、机器学习等。</p><h2 id="轻硬币问题"><a href="#轻硬币问题" class="headerlink" title="轻硬币问题"></a>轻硬币问题</h2><p>问题：有100枚硬币，其中1枚重量与众不同，是假币，略轻一些。如果用天平秤，请问至少称几次一定能找到这枚假币。</p><p>如果是正常的两两比较，那么至少需要比较50次，这“至少50次”指的是在方案最优的情况下的最坏情况次数</p><p>知乎上面给的流程图是这样的，个人感觉是i+2进行循环</p><img src="/2023/03/19/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/1679194142199-5e324da7-e4f6-4994-9bc2-5eb4e7b192b3.jpeg" class="" title="img"><p>利用分治的方式进行解决的话就是每一次将硬币三等分，那么结果就是只需要<img src="/2023/03/19/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/e09b2e24d9235f875017e7e58780be8f.svg" class="" title="img">上取整次数就可以取到，还是很香的。</p><details class="lake-collapse"><summary id="u34143fd5"><span class="ne-text">引用知乎文章流程</span></summary><p id="uff575b88" class="ne-p" style="margin: 0; padding: 0; min-height: 24px"><span class="ne-text" style="color: rgb(18, 18, 18)">1.将100硬币分成3份，33,33,34。</span></p><p id="u8ed54400" class="ne-p" style="margin: 0; padding: 0; min-height: 24px"><span class="ne-text" style="color: rgb(18, 18, 18)">2.称量1、2份，若天平平衡，则假币必在另外34枚中。若不平衡，假币在轻的那33枚里。</span></p><p id="ud0e0c555" class="ne-p" style="margin: 0; padding: 0; min-height: 24px"><span class="ne-text" style="color: rgb(18, 18, 18)">3.将34枚分为11/11/12枚（或将33枚分成11*3）。</span></p><p id="u61a94411" class="ne-p" style="margin: 0; padding: 0; min-height: 24px"><span class="ne-text" style="color: rgb(18, 18, 18)">4.称量两组11枚的硬币，若平衡，假币在12枚里（或另外的11枚）若不平衡，假币在轻的11里。</span></p><p id="u7b6cfc51" class="ne-p" style="margin: 0; padding: 0; min-height: 24px"><span class="ne-text" style="color: rgb(18, 18, 18)">5.将11（或12）枚分成3/4/4（或4/4/4），称量4/4，方法同上。</span></p><p id="ufb28b0fe" class="ne-p" style="margin: 0; padding: 0; min-height: 24px"><span class="ne-text" style="color: rgb(18, 18, 18)">6.将剩下的3（或4）分为1/1/1（或1/1），称量1/1，若平衡，则剩下的一枚是假币，若不平衡，轻的是假币。 若还剩4枚，出现1/1平衡，剩下2枚则称量，显然轻的是假币。</span></p><p id="ud268fb00" class="ne-p" style="margin: 0; padding: 0; min-height: 24px"><span class="ne-text" style="color: rgb(18, 18, 18)">这种方法只需要5次就能解决这个问题。</span></p></details><img src="/2023/03/19/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/1679195871811-3d21f753-97d7-4a3d-a600-522208793c12.png" class="" title="img"><p>五次的结果和<img src="/2023/03/19/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/67273a77503c4d77ef9d2833b1290014.svg" class="" title="img">上取整结果是相同的，这里我傻了，我在竟然在纠结😖计算器如何实现<img src="/2023/03/19/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/45c3ed0d448a967de2be87df9d46a967.svg" class="" title="img">怎么求，哈人</p><p>编程实现（再不编程算法我感觉我都要废了）：</p><p>数组初始赋值：</p><p><a href="https://blog.csdn.net/weixin_39761558/article/details/113561564">https://blog.csdn.net/weixin_39761558/article/details/113561564</a></p><p>memset函数赋值事项：</p><p><a href="https://www.jianshu.com/p/ed1ce7583bf7">https://www.jianshu.com/p/ed1ce7583bf7</a></p><p><a href="https://www.jb51.net/article/223385.htm">https://www.jb51.net/article/223385.htm</a></p><p>其实也就是memset要么适合于字符数组的取值，要么适合于0的赋值，像int这种4个字节的，只能说将最后的字节长度设置成为sizeof(array)或者是all*size(int)这种来赋值0</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int weight[101]=&#123;0&#125;;</span><br><span class="line">cout&lt;&lt;sizeof(weight)&lt;&lt;endl;//404</span><br></pre></td></tr></table></figure><p>随机数生成：</p><p><a href="https://blog.csdn.net/EmileJiao/article/details/123351432">https://blog.csdn.net/EmileJiao/article/details/123351432</a></p><h1 id="动态规划算法"><a href="#动态规划算法" class="headerlink" title="动态规划算法"></a>动态规划算法</h1><h2 id="动态规划算法的概念"><a href="#动态规划算法的概念" class="headerlink" title="动态规划算法的概念"></a>动态规划算法的概念</h2><p>动态规划（Dynamic Programming，DP）是一种常用的算法思想，主要用于优化问题，它通常用于<strong>求解一些最优化问题</strong>，例如<strong>最长公共子序列</strong>、<strong>背包问题</strong>、<strong>最短路问题</strong>等。</p><p>动态规划算法的核心思想是将原问题分解成若干个子问题，<strong>通过求解子问题的最优解来求解原问题的最优解</strong>。具体来说，动态规划算法通常包括以下几个步骤</p><ol><li><strong>定义状态</strong>：找到问题的状态，并设计状态表示方式。</li><li><strong>确定状态转移方程</strong>：找到问题的状态之间的转移关系，并设计状态转移方程。</li><li><strong>初始状态</strong>：确定初始状态。</li><li><strong>计算最优解</strong>：利用状态转移方程递推计算最优解。</li><li><strong>返回最优解</strong>。</li></ol><p>动态规划算法通常具有较高的时间复杂度，但由于它具有<strong>较好的子问题重叠性和最优子结构性质</strong>，因此能够有效地解决很多复杂的问题。</p><p>动态规划算法可以应用于多种场景，例如<strong>文本分析、图像处理、计算机视觉、自然语言处理</strong>等</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>web学习记录</title>
       <link href="/2023/03/17/web/"/>
       <url>/2023/03/17/web/</url>
