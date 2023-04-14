@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>IDEA+tomcat配置服务器（1）</title>
+      <link href="/2023/04/14/IDEA-tomcat%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%881%EF%BC%89/"/>
+      <url>/2023/04/14/IDEA-tomcat%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%881%EF%BC%89/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Servlet与Tomcat"><a href="#Servlet与Tomcat" class="headerlink" title="Servlet与Tomcat"></a>Servlet与Tomcat</h1><p><a href="https://blog.csdn.net/m0_37271739/article/details/112620356">https://blog.csdn.net/m0_37271739/article/details/112620356</a></p><p><a href="https://blog.csdn.net/qq_40432425/article/details/119275474">https://blog.csdn.net/qq_40432425/article/details/119275474</a></p><p> <strong>Servlet</strong>是Sun公司制定的<strong>一套标准</strong>。是使用<strong>java语言编写的服务器端程序</strong>，用于处理请求-响应模式下的web服务。而<strong>Tomcat则是实现了这一套标准</strong>，用于实际<strong>处理web请求</strong>。它是一种<strong>Servlet容器</strong>。  </p><p><a href="https://so.csdn.net/so/search?q=servlet&spm=1001.2101.3001.7020">servlet</a>接口定义的是一套处理<strong>网络请求的规范</strong> 。</p><p>Servlet 是 java 提供的一门 <strong>动态 web资源开发技术</strong>。</p><p>Servlet 是 <strong>Java EE 规范</strong>之一，是一个<strong>接口</strong>。</p><h1 id="配置大体过程"><a href="#配置大体过程" class="headerlink" title="配置大体过程"></a>配置大体过程</h1><p>创建空模块、配置网络应用的框架支持、导入jar包、配置tomcat</p><h1 id="创建模块"><a href="#创建模块" class="headerlink" title="创建模块"></a>创建模块</h1><p>从默认选项创建起：</p><img src="/2023/04/14/IDEA-tomcat%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%881%EF%BC%89/1681457152609-f4819adb-2ebe-4943-87b8-ac5c354a1dbd.png" class="" title="img"><img src="/2023/04/14/IDEA-tomcat%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%881%EF%BC%89/1681457204715-64eeea10-a4cc-4f8e-a55b-279eb8734993.png" class="" title="img"><h1 id="将网络应用添加到框架支持"><a href="#将网络应用添加到框架支持" class="headerlink" title="将网络应用添加到框架支持"></a>将网络应用添加到框架支持</h1><img src="/2023/04/14/IDEA-tomcat%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%881%EF%BC%89/1681457388958-ba37dd7f-bbf2-4112-9808-181d70da2825.png" class="" title="img"><p>添加框架支持</p><img src="/2023/04/14/IDEA-tomcat%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%881%EF%BC%89/1681457469903-0421bfda-127f-490b-ba5a-412609202309.png" class="" title="img"><p>选择网络应用支持</p><h1 id="导入jar包"><a href="#导入jar包" class="headerlink" title="导入jar包"></a>导入jar包</h1><p>先找到tomcat文件夹lib下面的servlet-api.jar包进行复制</p><img src="/2023/04/14/IDEA-tomcat%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%881%EF%BC%89/1681457762588-0325a4d7-7164-4749-8e2f-4cd13b0c7634.png" class="" title="img"><p>先在工程的WEB-INFO下面创建lib文件夹，将jar包粘贴进去</p><img src="/2023/04/14/IDEA-tomcat%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%881%EF%BC%89/1681457919916-4af095aa-9b0a-4817-9efc-0abdba57970f.png" class="" title="img"><p>然后将其作为库进行添加到工程中</p><img src="/2023/04/14/IDEA-tomcat%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%881%EF%BC%89/1681458052261-83b1948e-c1a3-48ee-bb53-8ddae1129af3.png" class="" title="img"><p>名字随便起，结果如下</p><img src="/2023/04/14/IDEA-tomcat%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%881%EF%BC%89/1681458169745-dbc37cff-12f6-4cf3-9b55-ea28943e2f8f.png" class="" title="img"><p><a href="https://blog.csdn.net/G_rainy/article/details/105799165">https://blog.csdn.net/G_rainy/article/details/105799165</a></p><h1 id="配置tomcat"><a href="#配置tomcat" class="headerlink" title="配置tomcat"></a>配置tomcat</h1><p>首先需要早设置里面进入“建立、执行、部署”目录下，找到应用服务器，配置对应tomcat目录文件即可</p><img src="/2023/04/14/IDEA-tomcat%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%881%EF%BC%89/1681462906047-70f9bfc6-a2f4-459c-8d69-d58704413e30.png" class="" title="img"><p>接着在右上角运行器处添加即可</p><img src="/2023/04/14/IDEA-tomcat%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%881%EF%BC%89/1681463028153-8cc98042-694c-4ca6-b487-b1fa1500f118.png" class="" title="img"><p>如果此时工程下面有多个模块，需要到Deployment下面添加对应工程的模块</p><h1 id="创建类"><a href="#创建类" class="headerlink" title="创建类"></a>创建类</h1><p>在src文件夹下面可以创建自己的类</p><img src="/2023/04/14/IDEA-tomcat%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%881%EF%BC%89/1681458200063-893ee044-18dd-49a2-b9bc-582d8278e59d.png" class="" title="img"><h1 id="Servlet接口"><a href="#Servlet接口" class="headerlink" title="Servlet接口"></a>Servlet接口</h1><p>可以直接使用提示信息进行导入方法：</p><img src="/2023/04/14/IDEA-tomcat%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%881%EF%BC%89/1681463147794-eb6a3334-3c70-4e38-b8e1-f6d14e8e0360.png" class="" title="img"><img src="/2023/04/14/IDEA-tomcat%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%881%EF%BC%89/1681463201485-56f3000d-1de9-4c3c-89f4-57288595d8fa.png" class="" title="img"><h1 id="工程编译版本配置"><a href="#工程编译版本配置" class="headerlink" title="工程编译版本配置"></a>工程编译版本配置</h1><p><a href="https://www.cnblogs.com/east7/p/13337630.html">https://www.cnblogs.com/east7/p/13337630.html</a></p><p><a href="https://blog.csdn.net/weixin_46369022/article/details/125985167">https://blog.csdn.net/weixin_46369022/article/details/125985167</a></p><h2 id="JDK是什么"><a href="#JDK是什么" class="headerlink" title="JDK是什么"></a>JDK是什么</h2><p>JDK是<strong>Java Development Kit</strong>的缩写，是<strong>Java开发工具包</strong>的意思。它是Java编程语言的<strong>软件开发工具包</strong>，包含<strong>Java编译器、Java虚拟机、Java类库</strong>等工具和组件，可以用于开发Java应用程序、Java Web应用程序、Java桌面应用程序等。JDK是Java开发的基础，是Java应用程序开发必不可少的工具。JDK提供了开发、调试、运行Java程序所需的所有工具和环境，可以在Windows、Linux、macOS等多种操作系统上使用。</p><h2 id="SDK是什么"><a href="#SDK是什么" class="headerlink" title="SDK是什么"></a>SDK是什么</h2><p>SDK是<strong>Software Development Kit</strong>的缩写，指的是<strong>软件开发工具包</strong>。与JDK类似，SDK是一组开发工具和资源的集合，用于帮助开发人员构建特定类型的应用程序、软件库或系统。SDK包含一些必要的工具、API、代码示例和文档等，可以帮助开发人员快速开发出高质量的软件。</p><p>不同的SDK适用于不同的软件开发领域和平台，例如，Android SDK是用于开发Android应用程序的工具包，iOS SDK是用于开发iOS应用程序的工具包，Windows SDK是用于开发Windows桌面和服务器应用程序的工具包。SDK通常包含一个集成开发环境（IDE）和调试器等工具，使开发人员可以轻松创建、编译、测试和部署他们的应用程序。</p><h2 id="language-level是什么"><a href="#language-level是什么" class="headerlink" title="language level是什么"></a>language level是什么</h2><p>在编程语言中，language level（<strong>语言级别</strong>）是指<strong>编程语言的不同版本或子集</strong>，它们具有不同的功能、特性和语法。通常，语言级别是根据编程语言的发展历史和技术进展来定义的。</p><p>对于一种编程语言，可以有多个语言级别。较低的语言级别通常具有更少的功能和特性，更接近底层硬件和操作系统。较高的语言级别则具有更多的高级特性和抽象概念，可以更快速、方便地实现复杂的功能。</p><p>在Java编程语言中，语言级别指的是<strong>Java编译器所支持的语言特性和版本</strong>。不同的Java版本有不同的语言级别，例如<strong>Java SE 8支持语言级别为8</strong>的特性，Java SE 9支持语言级别为9的特性。程序员可以选择使用特定的语言级别来编写Java程序，以便在特定的Java版本上运行。</p><h2 id="配置方式"><a href="#配置方式" class="headerlink" title="配置方式"></a>配置方式</h2><img src="/2023/04/14/IDEA-tomcat%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%881%EF%BC%89/1681471569246-ee006b7c-b110-4cc2-b215-1a9c1c7ac200.png" class="" title="img"><img src="/2023/04/14/IDEA-tomcat%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%881%EF%BC%89/1681471591792-0b6fb855-785e-432b-bff6-88e174bf0a29.png" class="" title="img"><p>注意一个是用到的JDK一个是最小的编译语言版本，比如上面JDK（SDK）设置的是15下面的语言版本就得&lt;&#x3D;15</p><h1 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h1><img src="/2023/04/14/IDEA-tomcat%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%881%EF%BC%89/1681471737038-6ced57ad-3b6f-4c18-b669-907592a69a4d.png" class="" title="img"><img src="/2023/04/14/IDEA-tomcat%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%881%EF%BC%89/1681471752450-3a908d48-2318-437d-bf11-af1c1eb1c397.png" class="" title="img">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> web </tag>
+            
+            <tag> IDEA </tag>
+            
+            <tag> tomcat </tag>
+            
+            <tag> servlet </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>布拉布拉-机密</title>
       <link href="/2023/03/25/%E5%B8%83%E6%8B%89%E5%B8%83%E6%8B%89-%E6%9C%BA%E5%AF%86/"/>
       <url>/2023/03/25/%E5%B8%83%E6%8B%89%E5%B8%83%E6%8B%89-%E6%9C%BA%E5%AF%86/</url>
@@ -11,12 +36,6 @@
         <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">  <script id="hbeData" type="hbeData" data-hmacdigest="d303c9ef117f22a7f866800c6931f535701612769b7661fa62788312ac4e90cc">c389d3cf0bc846d369802051f205060b389b99ab71bfd2590bf060e52e03d1cfa8bc5d0ac561e5f2765362d7d6d0f6b6</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-xray">      <input class="hbe hbe-input-field hbe-input-field-xray" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-xray" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-xray">您好, 这里需要密码.</span>      </label>      <svg class="hbe hbe-graphic hbe-graphic-xray" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>      </svg>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       
       
-      
-        <tags>
-            
-            <tag> 作为日记加密 </tag>
-            
-        </tags>
       
     </entry>
     
@@ -33,7 +52,7 @@
       
         <tags>
             
-            <tag> web网络学习 </tag>
+            <tag> web </tag>
             
         </tags>
       
