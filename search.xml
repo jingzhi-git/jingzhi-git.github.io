@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>Virtualbox中的CentOS图形化界面</title>
+      <link href="/2023/04/16/Virtualbox%E4%B8%AD%E7%9A%84CentOS%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/"/>
+      <url>/2023/04/16/Virtualbox%E4%B8%AD%E7%9A%84CentOS%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/</url>
+      
+        <content type="html"><![CDATA[<h1 id="图形化界面"><a href="#图形化界面" class="headerlink" title="图形化界面"></a>图形化界面</h1><p>原教程：<a href="https://www.bilibili.com/video/BV1EV41147Ur/?spm_id_from=333.880.my_history.page.click">https://www.bilibili.com/video/BV1EV41147Ur/?spm_id_from=333.880.my_history.page.click</a></p><p>安装图形化界面：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum groupinstall -y <span class="string">&quot;GMOME Desktop&quot;</span></span><br></pre></td></tr></table></figure><p>启动图形化界面：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">init <span class="number">5</span></span><br></pre></td></tr></table></figure><p>退出图形化界面：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">init <span class="number">3</span></span><br></pre></td></tr></table></figure><h1 id="root方式登录图形化界面"><a href="#root方式登录图形化界面" class="headerlink" title="root方式登录图形化界面"></a>root方式登录图形化界面</h1><p>在选择用户的时候选择不在之中就行，用户名就是root解决不能复制和鼠标不共用的问题</p><h1 id="解决不能复制和鼠标不共用的问题"><a href="#解决不能复制和鼠标不共用的问题" class="headerlink" title="解决不能复制和鼠标不共用的问题"></a>解决不能复制和鼠标不共用的问题</h1><p>原网址：<a href="https://www.codenong.com/cs106119563/">https://www.codenong.com/cs106119563/</a></p><p>最开始是想用物理机到虚拟机的复制粘贴功能，选择设备-&gt;共享粘贴板-&gt;双向之后没有效果，搜了一下发现需要安装增强功能</p><img src="/2023/04/16/Virtualbox%E4%B8%AD%E7%9A%84CentOS%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/1681607295171-2398369d-388a-4bf8-8397-ccb73942236c.png" class="" title="img"><p>然而直接点“安装增强功能“也没有反应，需要先下载VirtualBox Guest Additions,（不止是复制粘贴，共享文件夹功能和分辨率低，没法全屏显示的问题都需要这个）</p><p><a href="https://download.virtualbox.org/virtualbox/6.0.20/">https://download.virtualbox.org/virtualbox/6.0.20/</a> 下载相应对应的VB Guest Additions</p><p>我们实验的是6.1.22，下面是压缩包：</p><p><a href="https://www.yuque.com/attachments/yuque/0/2023/zip/22969703/1681607533445-72b42eac-bc28-4ca2-a256-c3c1b8ee939b.zip">📎VBoxGuestAdditions_6.1.22.zip</a></p><p>也就是：<a href="https://download.virtualbox.org/virtualbox/6.1.22/">https://download.virtualbox.org/virtualbox/6.1.22/</a> </p><p>下好后，在virtualbox里点设置-&gt;存储，选中控制器，点右边的“添加虚拟光驱”（这时虚拟机要关机，否则这个钮是黑的），把刚才下的iso加进去</p><p>接着打开虚拟机，点击“安装增强功能”，这时会报错：“未能加载虚拟光驱 VBoxsGuestAdditions.iso到虚拟电脑“，<strong>这里我是没有任何显示错误，就是没有反应，接着往下就好</strong></p><p>点击左上角活动-&gt;文件，找到VB Guest虚拟光驱，把它弹出</p><img src="/2023/04/16/Virtualbox%E4%B8%AD%E7%9A%84CentOS%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/1681607295577-6a550bd1-c50c-465e-aac4-0782dbb83069.png" class="" title="img"><img src="/2023/04/16/Virtualbox%E4%B8%AD%E7%9A%84CentOS%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/1681607295294-1a000425-86fd-4397-ba09-979e7ec6ed7e.png" class="" title="img"><p>弹出后再点安装增强功能，就会出现下面这个对话框</p><img src="/2023/04/16/Virtualbox%E4%B8%AD%E7%9A%84CentOS%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/1681607295394-e68c3ed0-1bcc-40b0-81ff-01aee46eefdd.png" class="" title="img"><p>点击运行，如果没报错，安装完后重启就好了。</p><p><strong>我弄到这里就好了</strong></p><p>下面是原文的作者遇到的：</p><p>我这边是先报了一个“kernel headers not found for target kernel”，查阅资料发现要安装相应内核头。依次执行下面几条命令：</p><table><thead><tr><th>1 2 3</th><th>yum update kernel -y   yum install kernel-headers kernel-devel gcc make -y init 6</th></tr></thead><tbody><tr><td></td><td></td></tr></tbody></table><p>最后一条执行后会重启。我这里重启后最上面出现了一句话：“vboxclient:the virtualbox kernel service is not running” ，按照之前的步骤再点安装增强功能，之前的kernel headers的错没了，又出现了</p><p>“ValueError: File context for &#x2F;opt&#x2F;VBoxGuestAdditions-6.0.20&#x2F;other&#x2F;mount.vboxsf already defined modprobe vboxguest failed The log file &#x2F;var&#x2F;log&#x2F;vboxadd-setup.log may contain further information.”</p><p>。。。。。</p><p>看看&#x2F;var&#x2F;log&#x2F;vboxadd-setup.log的内容，“Error building the module，…….. please install libelf-dev, libelf-devel or elfutils-libelf-devel”</p><p>然后就安装elfutils-libelf-devel吧！（CentOS 上只有 elfutils-libelf-devel）</p><table><thead><tr><th>1</th><th>yum install elfutils-libelf-devel</th></tr></thead><tbody><tr><td></td><td></td></tr></tbody></table><p>再安装增强功能，过了小一分钟，依然还是报了上面的“…already defined modprobe vboxguest failed ”，但是看vboxadd-setup.log里面却没有报错，显示安装成功。。。接着我重启了一下，发现复制粘贴功能已经能用了，那就这样吧~</p><p>ps：其实如果只是为了用复制粘贴功能，可以在virtualbox设置一下端口转发，无界面打开虚拟机，然后用Xshell登陆就行了~毕竟Xshell自带复制粘贴功能还可以免费注册使用。具体可以看这里 <a href="https://www.luoluolzb.cn/article/86">https://www.luoluolzb.cn/article/86</a></p><h1 id="终端的鼠标显示"><a href="#终端的鼠标显示" class="headerlink" title="终端的鼠标显示"></a>终端的鼠标显示</h1><p><a href="http://vga.sanhaostreet.com/keji/202201/2817325.html**%E8%BF%99%E4%B8%AA%E4%B8%8D%E6%98%AF%E9%87%8D%E7%82%B9">http://vga.sanhaostreet.com/keji/202201/2817325.html**这个不是重点</a>**</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> CentOS </tag>
+            
+            <tag> Virtualbox </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>IDEA+tomcat配置服务器（1）</title>
       <link href="/2023/04/14/IDEA-tomcat%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%881%EF%BC%89/"/>
       <url>/2023/04/14/IDEA-tomcat%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%881%EF%BC%89/</url>
